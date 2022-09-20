@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ALICO\rmysore]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

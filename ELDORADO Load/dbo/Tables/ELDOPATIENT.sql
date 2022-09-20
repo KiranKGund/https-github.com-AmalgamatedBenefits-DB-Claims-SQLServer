@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[ELDOPATIENT] (
+    [UNDERWRITER]               VARCHAR (50) NULL,
+    [GROUP]                     VARCHAR (50) NULL,
+    [MEMBER_SSN]                VARCHAR (50) NULL,
+    [DEPENDENT_SEQUENCE_NUMBER] VARCHAR (50) NULL,
+    [PATIENT_EMAIL_ADDRESS]     VARCHAR (50) NULL
+);
+

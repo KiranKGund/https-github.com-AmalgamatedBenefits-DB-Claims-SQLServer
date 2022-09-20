@@ -1,0 +1,2 @@
+﻿CREATE USER [ALICO\drao] FOR LOGIN [ALICO\drao];
+

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ELDORADO_Load</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{d8862f6e-ada1-4465-a918-340e7a5b5667}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ELDORADO_Load</RootNamespace>
+    <AssemblyName>ELDORADO_Load</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ELDODISBPAIDHEADER_CONV.sql" />
+    <Build Include="dbo\Tables\MFELDOACTIVECLAIMS.sql" />
+    <Build Include="dbo\Tables\MFELDOEMPELIGNEW.sql" />
+    <Build Include="dbo\Tables\MFELDODISBPAID.sql" />
+    <Build Include="dbo\Tables\MFELDOEMPLOYEENEW.sql" />
+    <Build Include="dbo\Tables\MFELDODISBPEND.sql" />
+    <Build Include="dbo\Tables\MFELDOMCSCLMLINESNEW.sql" />
+    <Build Include="dbo\Tables\MFELDOMCSEXCEPTIONS.sql" />
+    <Build Include="dbo\Tables\MFELDOPAIDNEW.sql" />
+    <Build Include="dbo\Tables\eldodisbpdhdr_temp.sql" />
+    <Build Include="dbo\Tables\MFELDODEPELIGNEW.sql" />
+    <Build Include="dbo\Tables\MFELDODEPELIG.sql" />
+    <Build Include="dbo\Tables\CLAIMERRORCATEGORY.sql" />
+    <Build Include="dbo\Tables\CLAIMERRORCODES.sql" />
+    <Build Include="dbo\Tables\MFELDOMCSCLAIMSNEW.sql" />
+    <Build Include="dbo\Tables\CLIENTGROUP.sql" />
+    <Build Include="dbo\Tables\MFELDOPENDNEW.sql" />
+    <Build Include="dbo\Tables\CPT4_DIAG.sql" />
+    <Build Include="dbo\Tables\MFELDOPEND.sql" />
+    <Build Include="dbo\Tables\ELDO_ACCUM_DATA_1.sql" />
+    <Build Include="dbo\Tables\ELDO_EPISODES.sql" />
+    <Build Include="dbo\Tables\MFELDOPENDEXCEPTIONS.sql" />
+    <Build Include="dbo\Tables\ELDOMCSCLAIMSNEW3.sql" />
+    <Build Include="dbo\Tables\MFELDOPAIDNEW1.sql" />
+    <Build Include="dbo\Tables\ELDOCLMSHEADER.sql" />
+    <Build Include="dbo\Tables\MFELDOMCSCLAIMSNEW3.sql" />
+    <Build Include="dbo\Tables\ELDODEPELIG.sql" />
+    <Build Include="dbo\Tables\ELDODEPENDENT.sql" />
+    <Build Include="dbo\Tables\MFELDODEPENDENTNEW1.sql" />
+    <Build Include="dbo\Tables\ELDOACTIVECLAIMS.sql" />
+    <Build Include="dbo\Tables\ELDODISBPAIDLINES.sql" />
+    <Build Include="dbo\Tables\ELDODISBPENDLINES.sql" />
+    <Build Include="dbo\Tables\ELDOEMPELIG.sql" />
+    <Build Include="dbo\Tables\ELDOCLMSLINES.sql" />
+    <Build Include="dbo\Tables\ELDOEMPLOYEE.sql" />
+    <Build Include="dbo\Tables\ELDOEMPLOYERSALL.sql" />
+    <Build Include="dbo\Tables\TEMP_ELDO_DISBLTY_CONTROLS.sql" />
+    <Build Include="dbo\Tables\ELDOMCSCLMLINES.sql" />
+    <Build Include="dbo\Tables\ELDOMCSEXCEPTIONS.sql" />
+    <Build Include="dbo\Tables\ELDOMCSCLAIMS.sql" />
+    <Build Include="dbo\Tables\ELDOPATIENT.sql" />
+    <Build Include="dbo\Tables\MFELDOPAIDNEW2.sql" />
+    <Build Include="dbo\Tables\ELDOPENDCLMSHEADER.sql" />
+    <Build Include="dbo\Tables\ELDOPENDCLMSLINES.sql" />
+    <Build Include="dbo\Tables\ELDOPFLPAIDLINES.sql" />
+    <Build Include="dbo\Tables\ELDOPFLPENDLINES.sql" />
+    <Build Include="dbo\Tables\CustomerPhones2.sql" />
+    <Build Include="dbo\Tables\MFELDODEPENDENTNEW2.sql" />
+    <Build Include="dbo\Tables\ELDOPROVIDERSNEW_1.sql" />
+    <Build Include="dbo\Tables\MFELDODEPENDENTNEW.sql" />
+    <Build Include="dbo\Tables\ELDOPENDEXCEPTIONS.sql" />
+    <Build Include="dbo\Tables\WORKFLOWCLIENT.sql" />
+    <Build Include="dbo\Tables\ELDOPENDLINES.sql" />
+    <Build Include="dbo\Tables\MFELDOPAIDNEW3.sql" />
+    <Build Include="dbo\Tables\MFELDOPENDNEW2.sql" />
+    <Build Include="dbo\Tables\MFELDODISBPAID1.sql" />
+    <Build Include="dbo\Tables\MFELDODISBPAID_OLD.sql" />
+    <Build Include="dbo\Tables\MFELDODISBPEND1.sql" />
+    <Build Include="dbo\Tables\MFELDODISBPEND_OLD.sql" />
+    <Build Include="dbo\Tables\LOADREPORTING.sql" />
+    <Build Include="dbo\Tables\ICD9_DIAG1.sql" />
+    <Build Include="dbo\Tables\ELDODISBPAIDHEADER.sql" />
+    <Build Include="dbo\Tables\ELDODISBPENDHEADER.sql" />
+    <Build Include="dbo\Tables\MFELDOPENDNEW_1.sql" />
+    <Build Include="dbo\Tables\ELDOPENDHEADER.sql" />
+    <Build Include="dbo\Tables\ADDRESS.sql" />
+    <Build Include="dbo\Tables\MFELDOPENDNEW3.sql" />
+    <Build Include="dbo\Tables\TEMP_ELDOPENDCLMSHEADER.sql" />
+    <Build Include="dbo\Tables\BCP_ELDOPENDCLMSHEADER.sql" />
+    <Build Include="dbo\Tables\ELDOPFLPAIDHEADER.sql" />
+    <Build Include="dbo\Tables\BCP_combine.sql" />
+    <Build Include="dbo\Tables\ELDOLOADMASTER.sql" />
+    <Build Include="dbo\Tables\BCP_TEST_SELCOLS.sql" />
+    <Build Include="dbo\Tables\ELDOPFLPENDHEADER.sql" />
+    <Build Include="dbo\Tables\BCP_TEST_SELCOLS1.sql" />
+    <Build Include="dbo\Tables\CPT4_DIAG_TMP.sql" />
+    <Build Include="dbo\Tables\MFELDOPFLPEND.sql" />
+    <Build Include="dbo\Tables\ICD9_DIAG.sql" />
+    <Build Include="dbo\Views\V_ELDODISBPAIDHEADER.sql" />
+    <Build Include="Security\ALICO_drao_1.sql" />
+    <Build Include="Security\ALICO_drao_2.sql" />
+    <Build Include="Security\ALICO_!!jpwelch_1.sql" />
+    <Build Include="Security\ALICO_!!jpwelch_2.sql" />
+    <Build Include="Security\RoleMemberships_1.sql" />
+    <Build Include="Security\RoleMemberships_2.sql" />
+    <Build Include="dbo\Functions\ufn_Convert_to_Decimal.sql" />
+    <Build Include="dbo\Functions\ufn_Convert_to_Date.sql" />
+    <Build Include="dbo\Functions\ufn_Check_If_Process_Completed.sql" />
+    <Build Include="dbo\Functions\ufn_Check_If_Process_Errored.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOMCSEXCEPTIONS.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOACTIVECLAIMS.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDODISBPAID.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDODISBPEND.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOPENDEXCEPTIONS.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOEMPLOYEENEW.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDOEMPLOYEENEW.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDODISBPAID.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDODISBPEND.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDODEPELIGNEW.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDOEMPELIGNEW.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDOMCSCLMLINESNEW.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDOPENDNEW.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOPENDNEW.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOMCSCLAIMSNEW.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOMCSCLMLINESNEW.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOEMPELIGNEW.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDODEPENDENTNEW.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDODEPELIG.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDOMCSCLAIMSNEW.sql" />
+    <Build Include="dbo\Stored Procedures\BCP_LOAD_MFELDOPAIDNEW.sql" />
+    <Build Include="dbo\Stored Procedures\UPDATE_MFELDOPAIDNEW.sql" />
+    <Build Include="dbo\Stored Procedures\INSERT_MFELDOPAIDNEW.sql" />
+    <Build Include="dbo\Stored Procedures\MFELDOPAIDNEW_MAIN.sql" />
+    <Build Include="dbo\Stored Procedures\ELDOLOAD_BCP_MASTER.sql" />
+    <Build Include="dbo\Stored Procedures\ELDOLOAD_SQLCMD_MASTER.sql" />
+  </ItemGroup>
+</Project>
